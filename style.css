@@ -75,44 +75,58 @@ main {
 
 .signup {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: left; 
   align-items: center;
-  text-align: center;
-  padding: 0 1.5rem 4rem; 
+  margin-bottom: 4rem;
 }
 
-.signup #error-icon {
-  display: none;
-}
-
-.signup input {
-  padding: 1rem; 
-  width: 90%;
-  border-radius: 2rem;
-  border: 1px solid var(--desaturated-red); 
-  opacity: 0.5; 
-  background-color: transparent;
+.input-submit {
+  width: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin: auto; 
   position: relative; 
 }
 
-.signup input::placeholder {
-  color: var(--accent-light-red); 
-  font-weight: 600;
+.input-submit input {
+  width: 90%;
+  padding: 1rem; 
+  border-radius: 2rem;
+  border: 1px solid var(--accent-light-red); 
 }
 
-.signup button {
+.input-submit input::placeholder {
+  color: var(--accent-light-red); 
+  font-weight: 800;
+  opacity: 0.5;
+}
+
+#error-icon {
+  display: none;
+}
+
+#error-icon.active {
+  display: block;
   position: absolute; 
-  right: 35px; 
+  right: 6.2rem; 
+}
+
+button {
+  position: absolute; 
+  right: 19px; 
+  padding: 0.75rem 2rem; 
+  border-radius: 2rem;
+  background: linear-gradient(135deg, var(--accent-light-red), var(--accent-red));
   border: none; 
   outline: none; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 1.5rem;
 }
 
-.signup button img {
-  padding: 0.9rem 1.7rem; 
-  border-radius: 1.5rem;
-  background: linear-gradient(135deg, var(--accent-light-red), var(--accent-red));
+#error {
+  margin-top: 0.5rem;
+  color: var(--accent-red); 
+  margin-right: auto; 
+  padding-left: 3rem;
+  font-size: 13px;
 }
